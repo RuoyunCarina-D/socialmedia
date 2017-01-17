@@ -2,7 +2,7 @@ library(wordcould2)
 library(tm)
 
 #import twitter text file and transfer, then calculate the frequency of each word
-twitter<- scan("/Users/RuoyunDeng/Documents/Master/social_media/twitter_text.txt", what="character", sep="\n")
+twitter<- scan("twitter_text.txt", what="character", sep="\n")
 twitter_np <- gsub( "[^[:alnum:]@]", " ", twitter)
 myCorpus <- Corpus(VectorSource(twitter_np))
 
